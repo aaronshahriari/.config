@@ -31,7 +31,7 @@ vim.opt.isfname:append("@-@")
 vim.opt.updatetime = 50
 
 vim.opt.list = true
-vim.opt.listchars:append({ trail = ' ', eol = '↲' })
+vim.opt.listchars:append({ tab = '  ', nbsp = ' ', trail = ' ', eol = '↲' })
 
 -- change in builtin.lua found here -> \Users\aaron\AppData\Local\nvim-data\site\pack\packer\start\midnight\lua\midnight\highlight
 -- vim.cmd('highlight NonText guifg=#575757')
