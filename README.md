@@ -3,7 +3,6 @@ Here you will learn how I like to setup my NeoVim configuration when I use a new
 
 ## Step 1: Download NeoVim
 
-Download NeoVim:
 [NeoVim Download] (https://neovim.io/)
 
 ## Step 2: Setup Directories
@@ -63,7 +62,7 @@ Run PackerSync to merge all the plugins to your machine
 :PackerSync
 ```
 
-## Step 6:
+## Step 6: Reload and Enjoy
 
 Exit and save vim using this command
 ```vim
