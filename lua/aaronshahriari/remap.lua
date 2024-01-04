@@ -8,6 +8,13 @@ vim.cmd('autocmd FileType netrw set nu')
 vim.api.nvim_set_keymap('n', '<leader>h', ':tabprevious<CR>', { noremap = true, silent = true })
 vim.api.nvim_set_keymap('n', '<leader>l', ':tabnext<CR>', { noremap = true, silent = true })
 
+-- Map <leader>-j and <leader>-k to cycle through splits
+vim.api.nvim_set_keymap('n', '<leader>j', '<C-w>l', { noremap = true, silent = true })
+vim.api.nvim_set_keymap('n', '<leader>k', '<C-w>h', { noremap = true, silent = true })
+
+-- Map <leader>-n to open a new tab
+vim.api.nvim_set_keymap('n', '<leader>n', ':tabnew<CR>', { noremap = true, silent = true })
+
 -- shell scripting for windows
 vim.o.shell = 'bash.exe'
 vim.o.shellcmdflag = '-c'
