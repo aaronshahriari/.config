@@ -12,7 +12,13 @@ Create ~/.config/nvim directory
 mkdir ~/.config/nvim/
 ```
 
-## Step 3: Clone Plugin Manager
+## Step 3: Update $XDG_CONFIG_HOME
+Set the $XDG_CONFIG_HOME to the path of your .config
+```bash
+export $XDG_CONFIG_HOME="C:/User/{your username}/.config/"
+```
+
+## Step 4: Clone Plugin Manager
 
 Clone Packer - 'Unix or Linux'
 ```bash
@@ -25,19 +31,21 @@ Clone Packer - 'Windows Powershell'
 git clone https://github.com/wbthomason/packer.nvim "$env:LOCALAPPDATA\nvim-data\site\pack\packer\start\packer.nvim"
 ```
 
-## Step 4: Clone My Configurations
+## Step 5: Clone My Configurations
 
-Move into ~/.config/nvim directory
+Move into ~/.configdirectory
 ```bash
-cd ~/.config/nvim/
+cd ~/.config/
 ```
 
 Clone Configurations
 ```bash
 git clone https://github.com/aaronshahriari/aaron-nvim.git
+
+mv aaron-nvim nvim
 ```
 
-## Step 5: Sync Plugins
+## Step 6: Sync Plugins
 
 Navigate to packer.lua file
 ```bash
@@ -62,7 +70,7 @@ Run PackerSync to merge all the plugins to your machine
 :PackerSync
 ```
 
-## Step 6: Reload and Enjoy
+## Step 7: Reload and Enjoy
 
 Exit and save vim using this command
 ```vim
