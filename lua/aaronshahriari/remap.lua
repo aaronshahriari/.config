@@ -15,9 +15,15 @@ vim.api.nvim_set_keymap('n', '<leader>k', '<C-w>h', { noremap = true, silent = t
 -- Map <leader>-n to open a new tab
 vim.api.nvim_set_keymap('n', '<leader>n', ':tabnew<CR>', { noremap = true, silent = true })
 
--- shell scripting for windows
-vim.o.shell = 'bash.exe'
-vim.o.shellcmdflag = '-c'
+-- greatest remap ever
+vim.keymap.set("x", "<leader>p", [["_dP]])
+
+-- next greatest remap ever : asbjornHaland
+vim.keymap.set({"n", "v"}, "<leader>y", [["+y]])
+vim.keymap.set("n", "<leader>Y", [["+Y]])
+
+vim.keymap.set("v", "J", ":m '>+1<CR>gv=gv")
+vim.keymap.set("v", "K", ":m '<-2<CR>gv=gv")
 
 -- function to open a terminal in a new buffer
 local function terminalOpener()
