@@ -38,7 +38,7 @@ require("obsidian").setup({
     disable_frontmatter = false,
     note_frontmatter_func = function(note)
         local currentDate = os.date("%m/%d/%Y")
-        local out = { id = note.id .. " - " .. currentDate, aliases = "", tags = note.tags }
+        local out = { id = note.id .. " - " .. currentDate, aliases = {}, tags = {} }
         if note.metadata ~= nil and not vim.tbl_isempty(note.metadata) then
             for k, v in pairs(note.metadata) do
                 out[k] = v
