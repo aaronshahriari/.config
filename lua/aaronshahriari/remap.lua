@@ -5,7 +5,7 @@ vim.g.netrw_bufsettings = 'noma nomod nu nowrap ro nobl'
 vim.cmd('autocmd FileType netrw set nu')
 
 -- create new tab
-vim.api.nvim_set_keymap('n', '<leader>T', ':tabnew<CR>', { noremap = true, silent = true })
+vim.api.nvim_set_keymap('n', '<leader>T', ':tabnew|E<CR>', { noremap = true, silent = true })
 -- Map <leader>-h and <leader>-l to cycle through tabs
 vim.api.nvim_set_keymap('n', '<leader>h', ':tabprevious<CR>', { noremap = true, silent = true })
 vim.api.nvim_set_keymap('n', '<leader>l', ':tabnext<CR>', { noremap = true, silent = true })

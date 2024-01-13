@@ -33,5 +33,8 @@ vim.opt.updatetime = 50
 vim.opt.list = true
 vim.opt.listchars:append({ tab = '  ', nbsp = ' ', trail = ' ', eol = '↲' })
 
+-- used for obsidian
+vim.opt.conceallevel = 1
+
 -- change in builtin.lua found here -> \Users\aaron\AppData\Local\nvim-data\site\pack\packer\start\midnight\lua\midnight\highlight
 -- vim.cmd('highlight NonText guifg=#575757')
