@@ -26,15 +26,3 @@ vim.keymap.set("n", "<leader>Y", [["+Y]])
 
 vim.keymap.set("v", "J", ":m '>+1<CR>gv=gv")
 vim.keymap.set("v", "K", ":m '<-2<CR>gv=gv")
-
--- function to open a terminal in a new buffer
-local function terminalOpener()
-    local buf_name = vim.api.nvim_buf_get_name(0)
-    local file_dir = vim.fn.fnamemodify(buf_name, ":h")
-    vim.cmd("belowright 20new")
-    vim.cmd("cd " .. file_dir)
-    vim.cmd("term")
-    vim.cmd("startinsert")
-end
-
-vim.keymap.set("n", "<leader>t", terminalOpener)
