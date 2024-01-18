@@ -16,7 +16,6 @@ autocmd("BufWinEnter", {
         local opts = {buffer = bufnr, remap = false}
         vim.keymap.set("n", "<leader>p", function()
             vim.cmd.Git('push')
-            vim.cmd('<CR>')
             vim.cmd(':q')
         end, opts)
 
