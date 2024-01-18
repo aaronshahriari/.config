@@ -40,9 +40,8 @@ cd ~/.config/
 
 Clone Configurations
 ```bash
-git clone https://github.com/aaronshahriari/aaron-nvim.git
+git clone https://github.com/aaronshahriari/nvim.git
 
-mv aaron-nvim nvim
 ```
 
 ## Step 6: Sync Plugins
