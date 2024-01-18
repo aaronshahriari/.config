@@ -26,3 +26,15 @@ vim.keymap.set("n", "<leader>Y", [["+Y]])
 
 vim.keymap.set("v", "J", ":m '>+1<CR>gv=gv")
 vim.keymap.set("v", "K", ":m '<-2<CR>gv=gv")
+
+-- Define a function for creating a small terminal
+function small_terminal()
+  vim.cmd('new')
+  vim.cmd('wincmd J')
+  vim.api.nvim_win_set_height(0, 12)
+  vim.cmd('term')
+  vim.api.nvim_feedkeys('a', 'n', true)
+end
+
+-- Create a mapping for the small terminal function
+vim.api.nvim_set_keymap('n', '<leader>st', ':lua small_terminal()<CR>', { noremap = true, silent = true })
