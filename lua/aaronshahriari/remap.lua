@@ -43,9 +43,9 @@ vim.keymap.set("n", "<C-f>", "<cmd>silent !tmux neww ~/.dotfiles/bin/.local/scri
 function small_terminal()
     vim.cmd("new")
     vim.cmd("wincmd J")
-    vim.keymap.nvim_win_set_height(0, 12)
+    vim.api.nvim_win_set_height(0, 12)
     vim.cmd("term")
-    vim.keymap.nvim_feedkeys("a", "n", true)
+    vim.api.nvim_feedkeys("a", "n", true)
 end
 
 -- Create a mapping for the small terminal function
