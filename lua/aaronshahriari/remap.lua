@@ -13,8 +13,8 @@ vim.api.nvim_set_keymap('n', '<C-k>', '<C-w>k', { noremap = true, silent = true 
 -- Map to change split size
 vim.api.nvim_set_keymap('n', '<Left>', '<C-w>3<', { noremap = true, silent = true })
 vim.api.nvim_set_keymap('n', '<Right>', '<C-w>3>', { noremap = true, silent = true })
-vim.api.nvim_set_keymap('n', '<Up>', '<C-w>3+', { noremap = true, silent = true })
-vim.api.nvim_set_keymap('n', '<Down>', '<C-w>3-', { noremap = true, silent = true })
+vim.api.nvim_set_keymap('n', '<Down>', '<C-w>3+', { noremap = true, silent = true })
+vim.api.nvim_set_keymap('n', '<Up>', '<C-w>3-', { noremap = true, silent = true })
 
 -- map all splits set equal
 vim.api.nvim_set_keymap('n', '<leader>=', '<C-w>=', { noremap = true, silent = true })
