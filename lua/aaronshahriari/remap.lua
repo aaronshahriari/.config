@@ -16,6 +16,10 @@ vim.keymap.set("n", "<Right>", "<C-w>3>")
 vim.keymap.set("n", "<Down>", "<C-w>3+")
 vim.keymap.set("n", "<Up>", "<C-w>3-")
 
+-- create splits
+vim.keymap.set("n", "<leader>1", "<C-w>v")
+vim.keymap.set("n", "<leader>2", "<C-w>s")
+
 -- map all splits set equal
 vim.keymap.set("n", "<leader>=", "<C-w>=")
 
@@ -50,3 +54,7 @@ end
 
 -- Create a mapping for the small terminal function
 vim.keymap.set("n", "<leader>st", ":lua small_terminal()<CR>")
+
+vim.keymap.set("n", "<leader><leader>", function()
+    vim.cmd("so")
+end)

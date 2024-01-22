@@ -1,11 +1,11 @@
 -- set to 1, nvim will open the preview window after entering the Markdown buffer
 -- default: 0
-vim.g.mkdp_auto_start = 1
+-- vim.g.mkdp_auto_start = 1
 
 -- set to 1, the nvim will auto close current preview window when changing
 -- from Markdown buffer to another buffer
 -- default: 1
-vim.g.mkdp_auto_close = 0
+-- vim.g.mkdp_auto_close = 0
 
 -- options for Markdown rendering
 -- mkit: markdown-it options for rendering
@@ -28,6 +28,6 @@ vim.g.mkdp_preview_options = {
 
 -- use a custom Markdown style. Must be an absolute path
 -- like '/Users/username/markdown.css' or expand('~/markdown.css')
-vim.g.mkdp_markdown_css = 'C:/Users/aaron/.config/nvim/themes/markdown.css'
+-- vim.g.mkdp_markdown_css = '../../themes/markdown.css'
 
 vim.g.mkdp_theme = 'dark'
