@@ -43,7 +43,7 @@ vim.opt.conceallevel = 1
 vim.api.nvim_exec([[
   augroup TermWindowConfig
     autocmd!
-    autocmd TermOpen * setlocal scrolloff=8
+    autocmd TermOpen * setlocal scrolloff=0
   augroup END
 ]], false)
 
