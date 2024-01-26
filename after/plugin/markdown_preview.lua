@@ -28,6 +28,6 @@ vim.g.mkdp_preview_options = {
 
 -- use a custom Markdown style. Must be an absolute path
 -- like '/Users/username/markdown.css' or expand('~/markdown.css')
--- vim.g.mkdp_markdown_css = '../../themes/markdown.css'
+vim.g.mkdp_markdown_css = '~/.config/nvim/themes/markdown.css'
 
 vim.g.mkdp_theme = 'dark'
