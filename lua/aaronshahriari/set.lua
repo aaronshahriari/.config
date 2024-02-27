@@ -1,4 +1,5 @@
-vim.o.mouse = ""
+-- not allow the mouse
+-- vim.o.mouse = ""
 
 vim.opt.guicursor = ""
 
