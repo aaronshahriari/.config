@@ -44,7 +44,10 @@ vim.keymap.set("t", "<ESC>", [[<C-\><C-n>]])
 vim.keymap.set("n", "<C-f>", "<cmd>silent !tmux neww ~/.dotfiles/bin/.local/scripts/tmux-sessionizer<CR>")
 
 -- Define a function for creating a small terminal
-function small_terminal()
+-- entering the current directory of file you are inside
+function Small_terminal()
+    local current_directory = vim.fn.expand("%:p:h")
+    vim.api.nvim_set_current_dir(current_directory)
     vim.cmd("new")
     vim.cmd("wincmd J")
     vim.api.nvim_win_set_height(0, 12)
@@ -53,7 +56,23 @@ function small_terminal()
 end
 
 -- Create a mapping for the small terminal function
-vim.keymap.set("n", "<leader>st", ":lua small_terminal()<CR>")
+vim.keymap.set("n", "<leader>st", ":lua Small_terminal()<CR>")
+
+-- Define a function for creating a split terminal
+-- opens in the directory entered before vim
+function Split_terminal()
+    local current_directory = vim.fn.expand("%:p:h")
+    vim.api.nvim_set_current_dir(current_directory)
+    vim.cmd("new")
+    vim.cmd("wincmd L")
+    vim.cmd("wincmd =")
+    -- vim.api.nvim_win_set_height(0, 12)
+    vim.cmd("term")
+    vim.api.nvim_feedkeys("a", "n", true)
+end
+
+-- Create a mapping for the small terminal function
+vim.keymap.set("n", "<leader>t", ":lua Split_terminal()<CR>")
 
 vim.keymap.set("n", "<leader><leader>", function()
     vim.cmd("so")
