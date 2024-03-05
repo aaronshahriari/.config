@@ -5,6 +5,8 @@ vim.cmd [[packadd packer.nvim]]
 
 return require('packer').startup(function(use)
     -- Packer can manage itself
+    use { 'echasnovski/mini.ai', version = '*' }
+    use 'folke/todo-comments.nvim'
     use 'wbthomason/packer.nvim'
     use "nvim-lua/plenary.nvim"
 
@@ -62,4 +64,3 @@ return require('packer').startup(function(use)
     use "lukas-reineke/indent-blankline.nvim"
 
 end)
-
