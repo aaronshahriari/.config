@@ -55,4 +55,3 @@ vim.api.nvim_exec([[
     autocmd WinEnter term://* startinsert
   augroup END
 ]], false)
-
