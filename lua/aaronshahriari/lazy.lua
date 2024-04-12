@@ -12,16 +12,22 @@ end
 vim.opt.rtp:prepend(lazypath)
 
 require('lazy').setup({
+    "tpope/vim-surround",
+    {
+        "chomosuke/term-edit.nvim",
+        lazy = false,
+        version = '1.*',
+    },
     {
         "echasnovski/mini.ai",
         version = "*"
     },
 
-     "folke/todo-comments.nvim",
+    "folke/todo-comments.nvim",
 
-     "nvim-lua/plenary.nvim",
+    "nvim-lua/plenary.nvim",
 
-     "numToStr/Comment.nvim",
+    "numToStr/Comment.nvim",
 
     {
         "nvim-telescope/telescope.nvim",
@@ -29,15 +35,19 @@ require('lazy').setup({
         dependencies = {"nvim-lua/plenary.nvim"},
     },
 
-    {
-        "dasupradyumna/midnight.nvim",
-        lazy = false,
-        priority = 1000,
-        config = function()
-            -- load the colorscheme here
-            vim.cmd([[colorscheme midnight]])
-        end,
-    },
+    -- new theme
+    { "bluz71/vim-moonfly-colors", name = "moonfly", lazy = false, priority = 1000 },
+
+    -- old theme (all black)
+    -- {
+    --     "dasupradyumna/midnight.nvim",
+    --     lazy = false,
+    --     priority = 1000,
+    --     config = function()
+    --         -- load the colorscheme here
+    --         vim.cmd([[colorscheme midnight]])
+    --     end,
+    -- },
 
     {
         "nvim-treesitter/nvim-treesitter",
