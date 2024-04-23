@@ -1,3 +1,3 @@
 -- Lua initialization file
-vim.cmd("colorscheme moonfly")
 vim.g.moonflyNormalFloat = true
+vim.cmd("colorscheme moonfly")
