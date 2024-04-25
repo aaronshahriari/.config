@@ -25,7 +25,7 @@ require("obsidian").setup({
             -- You can also add more custom ones...
         },    -- see below for full list of options 👇
     },
-    open_notes_in = "vsplit",
+    open_notes_in = "hsplit",
     mappings = {
         vim.keymap.set("n", "<C-o>", "<cmd>ObsidianOpen<CR>")
     }
