@@ -12,7 +12,8 @@ end
 vim.opt.rtp:prepend(lazypath)
 
 require('lazy').setup({
-    {
+    -- using obsisdian for now
+    --[[ {
         "iamcco/markdown-preview.nvim",
         cmd = { "MarkdownPreviewToggle", "MarkdownPreview", "MarkdownPreviewStop" },
         ft = { "markdown" },
@@ -20,7 +21,7 @@ require('lazy').setup({
         init = function()
 			vim.g.mkdp_filetypes = { "markdown" }
 		end,
-    },
+    }, ]]
     {
         "epwalsh/obsidian.nvim",
         version = "*",  -- recommended, use latest release instead of latest commit
