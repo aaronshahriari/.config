@@ -26,9 +26,12 @@ require("obsidian").setup({
         },    -- see below for full list of options 👇
     },
     open_notes_in = "hsplit",
-    mappings = {
-        vim.keymap.set("n", "<C-o>", "<cmd>ObsidianOpen<CR>")
-    }
+    callbacks = {
+        -- Runs anytime you enter the buffer for a note.
+        enter_note = function(client, note)
+            vim.cmd(":silent ObsidianOpen")
+        end,
+    },
 })
 vim.keymap.set("n", "gf", function()
   if require("obsidian").util.cursor_on_markdown_link() then
