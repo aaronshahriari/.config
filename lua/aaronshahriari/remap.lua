@@ -45,7 +45,7 @@ vim.keymap.set("v", "K", ":m '<-2<CR>gv=gv")
 vim.keymap.set("t", "<ESC>", [[<C-\><C-n>]])
 
 -- run tmux inside of vim
-vim.keymap.set("n", "<C-f>", "<cmd>silent !tmux neww $DOTFILES/tmux-sessionizer<CR>")
+vim.keymap.set("n", "<C-f>", "<cmd>silent !tmux neww $DOTFILES/bin/.local/scripts/tmux-sessionizer<CR>")
 
 -- Define a function for creating a small terminal
 -- entering the current directory of file you are inside

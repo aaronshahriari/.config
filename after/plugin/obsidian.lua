@@ -2,10 +2,16 @@ require("obsidian").setup({
     workspaces = {
         {
             name = "Personal",
+            -- home path
+            -- path = "~/../../mnt/c/Users/aaron/OneDrive/Documents/Aaron_Vault/Personal",
+            -- work path
             path = "~/../../mnt/c/Users/AaronShahriari/Aaron_Vault/Personal",
         },
         {
             name = "BrundageGroup",
+            -- home path
+            -- path = "~/../../mnt/c/Users/aaron/OneDrive/Documents/Aaron_Vault/BrundageGroup",
+            -- work path
             path = "~/../../mnt/c/Users/AaronShahriari/Aaron_Vault/BrundageGroup",
         },
     },
