@@ -5,20 +5,21 @@ vim.g.netrw_bufsettings = "noma nomod nu nowrap ro nobl"
 vim.cmd("autocmd FileType netrw set nu")
 
 -- Map these to move through splits
-vim.keymap.set("n", "<C-h>", "<C-w>h")
-vim.keymap.set("n", "<C-l>", "<C-w>l")
-vim.keymap.set("n", "<C-j>", "<C-w>j")
-vim.keymap.set("n", "<C-k>", "<C-w>k")
+vim.keymap.set("n", "<Left>", "<C-w>h")
+vim.keymap.set("n", "<Right>", "<C-w>l")
+vim.keymap.set("n", "<Down>", "<C-w>j")
+vim.keymap.set("n", "<Up>", "<C-w>k")
 
 -- Map these to move through tabs
 vim.keymap.set("n", "<leader>H", "gT")
 vim.keymap.set("n", "<leader>L", "gt")
 
+
 -- Map to change split size
-vim.keymap.set("n", "<Left>", "<C-w>3<")
-vim.keymap.set("n", "<Right>", "<C-w>3>")
-vim.keymap.set("n", "<Down>", "<C-w>3+")
-vim.keymap.set("n", "<Up>", "<C-w>3-")
+vim.keymap.set("n", "<leader>h", "<C-w>10<")
+vim.keymap.set("n", "<leader>l", "<C-w>10>")
+vim.keymap.set("n", "<leader>j", "<C-w>10+")
+vim.keymap.set("n", "<leader>k", "<C-w>10-")
 
 -- create splits
 vim.keymap.set("n", "<leader>1", "<C-w>v<C-w>l")
