@@ -5,10 +5,10 @@ vim.g.netrw_bufsettings = "noma nomod nu nowrap ro nobl"
 vim.cmd("autocmd FileType netrw set nu")
 
 -- Map these to move through splits
-vim.keymap.set("n", "<leader>h", "<C-w>h")
-vim.keymap.set("n", "<leader>l", "<C-w>l")
-vim.keymap.set("n", "<leader>j", "<C-w>j")
-vim.keymap.set("n", "<leader>k", "<C-w>k")
+vim.keymap.set("n", "<C-h>", "<C-w>h")
+vim.keymap.set("n", "<C-l>", "<C-w>l")
+vim.keymap.set("n", "<C-j>", "<C-w>j")
+vim.keymap.set("n", "<C-k>", "<C-w>k")
 
 -- Map these to move through tabs
 vim.keymap.set("n", "<leader>H", "gT")
@@ -74,17 +74,7 @@ end
 -- Create a mapping for the small terminal function
 vim.keymap.set("n", "<leader>t", ":lua Split_terminal()<CR>")
 
--- Define a function for creating a split terminal
--- opens in the directory entered before vim
-function Fullscreen_terminal()
-    vim.cmd("tabnew")
-    vim.cmd("term")
-    vim.api.nvim_feedkeys("a", "n", true)
-end
-
--- Create a mapping for the small terminal function
-vim.keymap.set("n", "<leader>T", ":lua Fullscreen_terminal()<CR>")
-
+-- source lua file
 vim.keymap.set("n", "<leader><leader>", function()
     vim.cmd("so")
 end)
