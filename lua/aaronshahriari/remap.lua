@@ -55,7 +55,7 @@ function Small_terminal()
     vim.cmd("wincmd J")
     vim.api.nvim_win_set_height(0, 12)
     vim.cmd("term")
-    vim.api.nvim_feedkeys("a", "n", true)
+    -- vim.api.nvim_feedkeys("a", "n", true)
 end
 
 -- Create a mapping for the small terminal function
@@ -69,7 +69,7 @@ function Split_terminal()
     vim.cmd("wincmd =")
     -- vim.api.nvim_win_set_height(0, 12)
     vim.cmd("term")
-    vim.api.nvim_feedkeys("a", "n", true)
+    -- vim.api.nvim_feedkeys("a", "n", true)
 end
 
 -- Create a mapping for the small terminal function
