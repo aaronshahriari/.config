@@ -44,17 +44,17 @@ vim.opt.cul = true
 -- vim.cmd('highlight NonText guifg=#575757')
 
 -- set the window options for :term
-vim.api.nvim_exec([[
-  augroup TermWindowConfig
-    autocmd!
-    autocmd TermOpen * setlocal scrolloff=0
-  augroup END
-]], false)
-
--- automatically enter insert mode when switching to :term window
-vim.api.nvim_exec([[
-  augroup AutoEnterInsert
-    autocmd!
-    autocmd WinEnter term://* startinsert
-  augroup END
-]], false)
+-- vim.api.nvim_exec([[
+--   augroup TermWindowConfig
+--     autocmd!
+--     autocmd TermOpen * setlocal scrolloff=0
+--   augroup END
+-- ]], false)
+--
+-- -- automatically enter insert mode when switching to :term window
+-- vim.api.nvim_exec([[
+--   augroup AutoEnterInsert
+--     autocmd!
+--     autocmd WinEnter term://* startinsert
+--   augroup END
+-- ]], false)
