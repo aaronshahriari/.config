@@ -38,21 +38,23 @@ vim.opt.listchars:append({ tab = '  ', nbsp = ' ', trail = ' ', eol = '↲' })
 -- used for obsidian
 vim.opt.conceallevel = 1
 
+vim.opt.cul = true
+
 -- change in builtin.lua found here -> ~\Local\nvim-data\site\pack\packer\start\midnight\lua\midnight\highlight
 -- vim.cmd('highlight NonText guifg=#575757')
 
 -- set the window options for :term
-vim.api.nvim_exec([[
-  augroup TermWindowConfig
-    autocmd!
-    autocmd TermOpen * setlocal scrolloff=0
-  augroup END
-]], false)
-
--- automatically enter insert mode when switching to :term window
-vim.api.nvim_exec([[
-  augroup AutoEnterInsert
-    autocmd!
-    autocmd WinEnter term://* startinsert
-  augroup END
-]], false)
+-- vim.api.nvim_exec([[
+--   augroup TermWindowConfig
+--     autocmd!
+--     autocmd TermOpen * setlocal scrolloff=0
+--   augroup END
+-- ]], false)
+--
+-- -- automatically enter insert mode when switching to :term window
+-- vim.api.nvim_exec([[
+--   augroup AutoEnterInsert
+--     autocmd!
+--     autocmd WinEnter term://* startinsert
+--   augroup END
+-- ]], false)

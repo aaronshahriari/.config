@@ -5,20 +5,21 @@ vim.g.netrw_bufsettings = "noma nomod nu nowrap ro nobl"
 vim.cmd("autocmd FileType netrw set nu")
 
 -- Map these to move through splits
-vim.keymap.set("n", "<leader>h", "<C-w>h")
-vim.keymap.set("n", "<leader>l", "<C-w>l")
-vim.keymap.set("n", "<leader>j", "<C-w>j")
-vim.keymap.set("n", "<leader>k", "<C-w>k")
+vim.keymap.set("n", "<Left>", "<C-w>h")
+vim.keymap.set("n", "<Right>", "<C-w>l")
+vim.keymap.set("n", "<Down>", "<C-w>j")
+vim.keymap.set("n", "<Up>", "<C-w>k")
 
 -- Map these to move through tabs
 vim.keymap.set("n", "<leader>H", "gT")
 vim.keymap.set("n", "<leader>L", "gt")
 
+
 -- Map to change split size
-vim.keymap.set("n", "<Left>", "<C-w>3<")
-vim.keymap.set("n", "<Right>", "<C-w>3>")
-vim.keymap.set("n", "<Down>", "<C-w>3+")
-vim.keymap.set("n", "<Up>", "<C-w>3-")
+vim.keymap.set("n", "<leader>h", "<C-w>10<")
+vim.keymap.set("n", "<leader>l", "<C-w>10>")
+vim.keymap.set("n", "<leader>j", "<C-w>10+")
+vim.keymap.set("n", "<leader>k", "<C-w>10-")
 
 -- create splits
 vim.keymap.set("n", "<leader>1", "<C-w>v<C-w>l")
@@ -54,7 +55,7 @@ function Small_terminal()
     vim.cmd("wincmd J")
     vim.api.nvim_win_set_height(0, 12)
     vim.cmd("term")
-    vim.api.nvim_feedkeys("a", "n", true)
+    -- vim.api.nvim_feedkeys("a", "n", true)
 end
 
 -- Create a mapping for the small terminal function
@@ -68,23 +69,13 @@ function Split_terminal()
     vim.cmd("wincmd =")
     -- vim.api.nvim_win_set_height(0, 12)
     vim.cmd("term")
-    vim.api.nvim_feedkeys("a", "n", true)
+    -- vim.api.nvim_feedkeys("a", "n", true)
 end
 
 -- Create a mapping for the small terminal function
 vim.keymap.set("n", "<leader>t", ":lua Split_terminal()<CR>")
 
--- Define a function for creating a split terminal
--- opens in the directory entered before vim
-function Fullscreen_terminal()
-    vim.cmd("tabnew")
-    vim.cmd("term")
-    vim.api.nvim_feedkeys("a", "n", true)
-end
-
--- Create a mapping for the small terminal function
-vim.keymap.set("n", "<leader>T", ":lua Fullscreen_terminal()<CR>")
-
+-- source lua file
 vim.keymap.set("n", "<leader><leader>", function()
     vim.cmd("so")
 end)
