@@ -52,11 +52,3 @@ vim.api.nvim_create_autocmd("TermOpen", {
     vim.opt_local.scrolloff = 0
   end,
 })
-
--- -- automatically enter insert mode when switching to :term window
--- vim.api.nvim_exec([[
---   augroup AutoEnterInsert
---     autocmd!
---     autocmd WinEnter term://* startinsert
---   augroup END
--- ]], false)
