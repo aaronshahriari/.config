@@ -43,14 +43,16 @@ vim.opt.cul = true
 -- change in builtin.lua found here -> ~\Local\nvim-data\site\pack\packer\start\midnight\lua\midnight\highlight
 -- vim.cmd('highlight NonText guifg=#575757')
 
--- set the window options for :term
-vim.api.nvim_exec([[
-  augroup TermWindowConfig
-    autocmd!
-    autocmd TermOpen * setlocal scrolloff=0
-  augroup END
-]], false)
---
+-- create a new autocmd in the augroup
+local augroup = vim.api.nvim_create_augroup("TermWindowConfig", { clear = true })
+vim.api.nvim_create_autocmd("TermOpen", {
+  group = augroup,
+  pattern = "*",
+  callback = function()
+    vim.opt_local.scrolloff = 0
+  end,
+})
+
 -- -- automatically enter insert mode when switching to :term window
 -- vim.api.nvim_exec([[
 --   augroup AutoEnterInsert
