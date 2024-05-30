@@ -67,7 +67,6 @@ function Split_terminal()
     vim.cmd("new")
     vim.cmd("wincmd L")
     vim.cmd("wincmd =")
-    -- vim.api.nvim_win_set_height(0, 12)
     vim.cmd("term")
     -- vim.api.nvim_feedkeys("a", "n", true)
 end
