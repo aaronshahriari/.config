@@ -20,6 +20,13 @@ require('lazy').setup({
     --     }
     -- },
     {
+        "vague2k/huez.nvim",
+        -- if you want registry related features, uncomment this
+        -- import = "huez-manager.import"
+        branch = "stable",
+        event = "UIEnter",
+    },
+    {
         "stevearc/oil.nvim",
         dependencies = { "nvim-tree/nvim-web-devicons" },
     },
@@ -58,18 +65,15 @@ require('lazy').setup({
 
     -- new theme
     { "bluz71/vim-moonfly-colors", name = "moonfly", lazy = false, priority = 1000 },
-
-    -- old theme (all black)
-    -- {
-    --     "dasupradyumna/midnight.nvim",
-    --     lazy = false,
-    --     priority = 1000,
-    --     config = function()
-    --         -- load the colorscheme here
-    --         vim.cmd([[colorscheme midnight]])
-    --     end,
-    -- },
-
+    {
+        "dasupradyumna/midnight.nvim",
+        lazy = false,
+        priority = 1000,
+        config = function()
+            -- load the colorscheme here
+            vim.cmd([[colorscheme midnight]])
+        end,
+    },
     {
         "nvim-treesitter/nvim-treesitter",
         tag = "v0.9.2",
