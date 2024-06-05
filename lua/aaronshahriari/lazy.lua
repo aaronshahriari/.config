@@ -12,13 +12,13 @@ end
 vim.opt.rtp:prepend(lazypath)
 
 require('lazy').setup({
-    {
-        "jonathanmorris180/salesforce.nvim",
-        dependencies = {
-            "nvim-lua/plenary.nvim",
-            "nvim-treesitter/nvim-treesitter",
-        }
-    },
+    -- {
+    --     "jonathanmorris180/salesforce.nvim",
+    --     dependencies = {
+    --         "nvim-lua/plenary.nvim",
+    --         "nvim-treesitter/nvim-treesitter",
+    --     }
+    -- },
     {
         "stevearc/oil.nvim",
         dependencies = { "nvim-tree/nvim-web-devicons" },
