@@ -66,15 +66,6 @@ require('lazy').setup({
     -- new theme
     { "bluz71/vim-moonfly-colors", name = "moonfly", lazy = false, priority = 1000 },
     {
-        "dasupradyumna/midnight.nvim",
-        lazy = false,
-        priority = 1000,
-        config = function()
-            -- load the colorscheme here
-            vim.cmd([[colorscheme midnight]])
-        end,
-    },
-    {
         "nvim-treesitter/nvim-treesitter",
         tag = "v0.9.2",
         build = ":TSUpdate",
