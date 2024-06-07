@@ -12,13 +12,13 @@ end
 vim.opt.rtp:prepend(lazypath)
 
 require('lazy').setup({
-    -- {
-    --     "jonathanmorris180/salesforce.nvim",
-    --     dependencies = {
-    --         "nvim-lua/plenary.nvim",
-    --         "nvim-treesitter/nvim-treesitter",
-    --     }
-    -- },
+    {
+        "xixiaofinland/sf.nvim",
+        dependencies = {
+            "nvim-treesitter/nvim-treesitter",
+            "ibhagwan/fzf-lua",
+        }
+    },
     {
         "vague2k/huez.nvim",
         -- if you want registry related features, uncomment this
@@ -79,7 +79,11 @@ require('lazy').setup({
 
     "mbbill/undotree",
     "tpope/vim-fugitive",
-    "itchyny/lightline.vim",
+
+    {
+        'nvim-lualine/lualine.nvim',
+        dependencies = { 'nvim-tree/nvim-web-devicons' }
+    },
 
     {
         "VonHeikemen/lsp-zero.nvim",
@@ -98,5 +102,4 @@ require('lazy').setup({
     },
 
     "lukas-reineke/indent-blankline.nvim",
-
 })

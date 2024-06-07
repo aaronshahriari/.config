@@ -1,22 +1,22 @@
--- require("salesforce").setup({
---     debug = {
---         to_file = false, -- logs debug messages to a file at vim.fn.stdpath("cache") .. "/salesforce.log"
---         to_command_line = false,
---     },
---     popup = {
---         -- The width of the popup window.
---         width = 100,
---         -- The height of the popup window.
---         height = 20,
---         -- The border characters to use for the popup window
---         borderchars = { "─", "│", "─", "│", "╭", "╮", "╯", "╰" },
---     },
---     file_manager = {
---         ignore_conflicts = false, -- ignores conflicts on "sf project retrieve/deploy"
---     },
---     org_manager = {
---         default_org_indicator = "󰄬",
---     },
---     -- Default SF CLI executable (should not need to be changed)
---     sf_executable = "sf",
--- })
+require("sf").setup({
+    -- Unless you want to customize, no need to copy-paste any of these
+    -- They are applied automatically
+
+    -- This plugin has both hotkeys and user commands supplied
+    -- This flag enable/disable hotkeys while user commands are always enabled
+    enable_hotkeys = true,
+
+    -- Metadata related hotkeys (e.g. push/retrieve Apex) are only enabled in
+    -- these filetypes
+    hotkeys_in_filetypes = {
+        "apex", "sosl", "soql"
+    },
+
+    -- Define what metadata to be listed in `list_md_to_retrieve()` (<leader>ml)
+    types_to_retrieve = {
+        "ApexClass",
+        "ApexTrigger",
+        "StaticResource",
+        "LightningComponentBundle"
+    },
+})
