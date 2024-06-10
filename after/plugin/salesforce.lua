@@ -4,7 +4,7 @@ require("sf").setup({
 
     -- This plugin has both hotkeys and user commands supplied
     -- This flag enable/disable hotkeys while user commands are always enabled
-    enable_hotkeys = true,
+    enable_hotkeys = false,
 
     -- Metadata related hotkeys (e.g. push/retrieve Apex) are only enabled in
     -- these filetypes
@@ -20,3 +20,7 @@ require("sf").setup({
         "LightningComponentBundle"
     },
 })
+
+-- remaps
+vim.keymap.set("n", "<leader>aa", ":SFRunAnonymousApex<CR>")
+vim.keymap.set("n", "<C-t>", ":SFToggle<CR>")
