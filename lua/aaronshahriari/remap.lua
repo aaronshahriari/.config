@@ -11,8 +11,8 @@ vim.keymap.set("n", "<C-j>", "<C-w>j")
 vim.keymap.set("n", "<C-k>", "<C-w>k")
 
 -- Map these to move through tabs
-vim.keymap.set("n", "<leader>H", "gT")
-vim.keymap.set("n", "<leader>L", "gt")
+vim.keymap.set("n", "<Left>", "gT")
+vim.keymap.set("n", "<Right>", "gt")
 
 
 -- Map to change split size
