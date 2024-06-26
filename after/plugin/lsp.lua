@@ -15,5 +15,16 @@ require('mason-lspconfig').setup({
             local lua_opts = lsp_zero.nvim_lua_ls()
             require('lspconfig').lua_ls.setup(lua_opts)
         end,
+        apex_ls = function()
+            require('lspconfig').apex_ls.setup ({
+                apex_jar_path = vim.fn.expand("/home/ashahriari/apex-jorje-lsp.jar"), -- change according to current system
+                apex_enable_semantic_errors = false,
+                apex_enable_completion_statistics = false,
+                filetypes = {
+                    "apex",
+                    "apexcode",
+                },
+            })
+        end,
     },
 })

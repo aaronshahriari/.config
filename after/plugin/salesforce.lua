@@ -22,5 +22,6 @@ require("sf").setup({
 })
 
 -- remaps
+vim.keymap.set("n", "<leader>q", ":SFRunQuery<CR>")
 vim.keymap.set("n", "<leader>aa", ":SFRunAnonymousApex<CR>")
 vim.keymap.set("n", "<C-t>", ":SFToggle<CR>")
