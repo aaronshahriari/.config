@@ -12,13 +12,13 @@ end
 vim.opt.rtp:prepend(lazypath)
 
 require('lazy').setup({
-    {
-        "xixiaofinland/sf.nvim",
-        dependencies = {
-            "nvim-treesitter/nvim-treesitter",
-            "ibhagwan/fzf-lua",
-        }
-    },
+    -- {
+    --     "xixiaofinland/sf.nvim",
+    --     dependencies = {
+    --         "nvim-treesitter/nvim-treesitter",
+    --         "ibhagwan/fzf-lua",
+    --     }
+    -- },
     {
         "vague2k/huez.nvim",
         -- if you want registry related features, uncomment this
