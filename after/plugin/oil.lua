@@ -12,8 +12,9 @@ require("oil").setup({
         ["<C-x>"] = "actions.select_split",
         ["<C-t>"] = "actions.select_tab",
         ["<C-p>"] = "actions.preview",
-        ["<C-l>"] = "actions.refresh",
+        ["<C-r>"] = "actions.refresh",
     },
+    use_default_keymaps = false,
     -- float = {
     --     -- Padding around the floating window
     --     padding = 2,
