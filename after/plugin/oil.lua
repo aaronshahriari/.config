@@ -13,6 +13,7 @@ require("oil").setup({
         ["<C-t>"] = "actions.select_tab",
         ["<C-p>"] = "actions.preview",
         ["<C-r>"] = "actions.refresh",
+        ["-"] = "actions.parent",
     },
     use_default_keymaps = false,
     -- float = {
